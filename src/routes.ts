@@ -16,6 +16,10 @@ const FusionMutilcolTable = lazy(() =>
 const FusionDialogTable = lazy(() => 
   import(/* webpackChunkName: 'table-dialog' */ '@/pages/FusionDialogTable')
 );
+const FusionJumpTable = lazy(() => 
+  import(/* webpackChunkName: 'table-dialog' */ '@/pages/FusionJumpTable')
+);
+
 
 
 const routerConfig: IRouterConfig[] = [
@@ -34,6 +38,7 @@ const routerConfig: IRouterConfig[] = [
     children: [
       { path: '/table/dialog', component: FusionDialogTable },
       { path: '/table/mutilcol', component: FusionMutilcolTable },
+      { path: '/table/jump', component: FusionJumpTable },
       { path: '/dashboard', component: Dashboard },
       { path: '/', redirect: '/dashboard' },
     ],

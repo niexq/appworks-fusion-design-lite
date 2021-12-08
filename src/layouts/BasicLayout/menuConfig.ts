@@ -13,7 +13,8 @@ const asideMenuConfig = [
     icon: 'chart-bar',
     children: [
       { name: '弹窗表格', path: '/table/dialog' },
-      { name: '过滤表格', path: '/table/mutilcol' }
+      { name: '过滤表格', path: '/table/mutilcol' },
+      { name: '详情表格', path: '/table/jump' },
     ],
   },
 ];
