@@ -67,7 +67,7 @@ const appConfig: IAppConfig = {
         onConfig: (response) => {
           // 请求成功：可以做全局的 toast 展示，或者对 response 做一些格式化
           if (response?.data?.code !== 0) {
-            Message.error(`${response?.data?.message} #${response?.data?.code}`);
+            if (response?.data?.code) Message.error(`${response?.data?.message} #${response?.data?.code}`);
           }
           return response;
         },

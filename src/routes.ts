@@ -7,6 +7,7 @@ import LoginWrapperPage from '@/components/LoginWrapperPage';
 const Dashboard = lazy(() => import(/* webpackChunkName: 'dashboard' */'@/pages/Dashboard'));
 // const Login = lazy(() => import('@/pages/Login'));
 const Login = lazy(() => import(/* webpackChunkName: 'user-login' */'@/pages/Login'));
+const FusionDialogTable = lazy(() => import('@/pages/FusionDialogTable'));
 const routerConfig: IRouterConfig[] = [
   {
     path: '/user',
@@ -27,7 +28,12 @@ const routerConfig: IRouterConfig[] = [
     component: BasicLayout,
     wrappers: [LoginWrapperPage],
     children: [
-      { path: '/', exact: true, component: Dashboard },
+      { path: '/table/dialog', component: FusionDialogTable },
+      { path: '/dashboard', component: Dashboard },
+      {
+        path: '/',
+        redirect: '/dashboard',
+      },
     ],
   },
 ];
